@@ -55,6 +55,11 @@
             this.Btn_SatisIrsaliyesi = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_AlisIrsaliyesi = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_KasaHareketleri = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_MusteriCeki = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_KendiCekimiz = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_BankayaCekCikisi = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_CariyeCekCikisi = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_CekListesi = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -66,10 +71,38 @@
             this.ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.navBarControl1 = new DevExpress.XtraNavBar.NavBarControl();
+            this.navBarGroup1 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.NavBTN_StokKarti = new DevExpress.XtraNavBar.NavBarItem();
+            this.NavBTN_StokListesi = new DevExpress.XtraNavBar.NavBarItem();
+            this.NavBTN_StokGrupları = new DevExpress.XtraNavBar.NavBarItem();
+            this.NavBTN_StokHareketleri = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup2 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.NavBTN_CariAcilisKarti = new DevExpress.XtraNavBar.NavBarItem();
+            this.NavBTN_CariGrupları = new DevExpress.XtraNavBar.NavBarItem();
+            this.NavBTN_CariListesi = new DevExpress.XtraNavBar.NavBarItem();
+            this.NavBTN_CariHareketleri = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup3 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.NavBTN_BankaAcilisKarti = new DevExpress.XtraNavBar.NavBarItem();
+            this.NavBTN_BankaListesi = new DevExpress.XtraNavBar.NavBarItem();
+            this.NavBTN_Bankaİslemi = new DevExpress.XtraNavBar.NavBarItem();
+            this.NavBTN_BankaHareketleri = new DevExpress.XtraNavBar.NavBarItem();
+            this.NavBTN_ParaTransferi = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup4 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.NavBTN_KasaAcilisİslemi = new DevExpress.XtraNavBar.NavBarItem();
+            this.NavBTN_KasaListesi = new DevExpress.XtraNavBar.NavBarItem();
+            this.NavBTN_KasaDevirİslemKarti = new DevExpress.XtraNavBar.NavBarItem();
+            this.NavBTN_KasaTahsilatÖdeme = new DevExpress.XtraNavBar.NavBarItem();
+            this.NavBTN_KasaHareketleri = new DevExpress.XtraNavBar.NavBarItem();
+            this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
+            this.alertControl1 = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -101,16 +134,22 @@
             this.Btn_AlisIadeFaturasi,
             this.Btn_SatisIrsaliyesi,
             this.Btn_AlisIrsaliyesi,
-            this.Btn_KasaHareketleri});
+            this.Btn_KasaHareketleri,
+            this.Btn_MusteriCeki,
+            this.Btn_KendiCekimiz,
+            this.Btn_BankayaCekCikisi,
+            this.Btn_CariyeCekCikisi,
+            this.Btn_CekListesi});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 25;
+            this.ribbon.MaxItemId = 30;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
             this.ribbonPage3,
             this.ribbonPage4,
-            this.ribbonPage5});
+            this.ribbonPage5,
+            this.ribbonPage6});
             this.ribbon.Size = new System.Drawing.Size(773, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
@@ -337,6 +376,56 @@
             this.Btn_KasaHareketleri.Name = "Btn_KasaHareketleri";
             this.Btn_KasaHareketleri.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_KasaHareketleri_ItemClick);
             // 
+            // Btn_MusteriCeki
+            // 
+            this.Btn_MusteriCeki.Caption = "Müşteri Çeki";
+            this.Btn_MusteriCeki.Id = 25;
+            this.Btn_MusteriCeki.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_MusteriCeki.ImageOptions.Image")));
+            this.Btn_MusteriCeki.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_MusteriCeki.ImageOptions.LargeImage")));
+            this.Btn_MusteriCeki.LargeWidth = 60;
+            this.Btn_MusteriCeki.Name = "Btn_MusteriCeki";
+            this.Btn_MusteriCeki.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_MusteriCeki_ItemClick);
+            // 
+            // Btn_KendiCekimiz
+            // 
+            this.Btn_KendiCekimiz.Caption = "Kendi Çekimiz";
+            this.Btn_KendiCekimiz.Id = 26;
+            this.Btn_KendiCekimiz.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_KendiCekimiz.ImageOptions.Image")));
+            this.Btn_KendiCekimiz.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_KendiCekimiz.ImageOptions.LargeImage")));
+            this.Btn_KendiCekimiz.LargeWidth = 50;
+            this.Btn_KendiCekimiz.Name = "Btn_KendiCekimiz";
+            this.Btn_KendiCekimiz.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_KendiCekimiz_ItemClick);
+            // 
+            // Btn_BankayaCekCikisi
+            // 
+            this.Btn_BankayaCekCikisi.Caption = "Bankaya Çek Çıkışı";
+            this.Btn_BankayaCekCikisi.Id = 27;
+            this.Btn_BankayaCekCikisi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_BankayaCekCikisi.ImageOptions.Image")));
+            this.Btn_BankayaCekCikisi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_BankayaCekCikisi.ImageOptions.LargeImage")));
+            this.Btn_BankayaCekCikisi.LargeWidth = 70;
+            this.Btn_BankayaCekCikisi.Name = "Btn_BankayaCekCikisi";
+            this.Btn_BankayaCekCikisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_BankayaCekCikisi_ItemClick);
+            // 
+            // Btn_CariyeCekCikisi
+            // 
+            this.Btn_CariyeCekCikisi.Caption = "Cariye Çek Çıkışı";
+            this.Btn_CariyeCekCikisi.Id = 28;
+            this.Btn_CariyeCekCikisi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_CariyeCekCikisi.ImageOptions.Image")));
+            this.Btn_CariyeCekCikisi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_CariyeCekCikisi.ImageOptions.LargeImage")));
+            this.Btn_CariyeCekCikisi.LargeWidth = 60;
+            this.Btn_CariyeCekCikisi.Name = "Btn_CariyeCekCikisi";
+            this.Btn_CariyeCekCikisi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_CariyeCekCikisi_ItemClick);
+            // 
+            // Btn_CekListesi
+            // 
+            this.Btn_CekListesi.Caption = "Çek Listesi";
+            this.Btn_CekListesi.Id = 29;
+            this.Btn_CekListesi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_CekListesi.ImageOptions.Image")));
+            this.Btn_CekListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_CekListesi.ImageOptions.LargeImage")));
+            this.Btn_CekListesi.LargeWidth = 75;
+            this.Btn_CekListesi.Name = "Btn_CekListesi";
+            this.Btn_CekListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_CekListesi_ItemClick);
+            // 
             // ribbonPage1
             // 
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -427,6 +516,23 @@
             this.ribbonPageGroup6.Name = "ribbonPageGroup6";
             this.ribbonPageGroup6.Text = "İrsaliye İşlemleri";
             // 
+            // ribbonPage6
+            // 
+            this.ribbonPage6.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup7});
+            this.ribbonPage6.Name = "ribbonPage6";
+            this.ribbonPage6.Text = "Çekler";
+            // 
+            // ribbonPageGroup7
+            // 
+            this.ribbonPageGroup7.ItemLinks.Add(this.Btn_MusteriCeki);
+            this.ribbonPageGroup7.ItemLinks.Add(this.Btn_KendiCekimiz);
+            this.ribbonPageGroup7.ItemLinks.Add(this.Btn_BankayaCekCikisi);
+            this.ribbonPageGroup7.ItemLinks.Add(this.Btn_CariyeCekCikisi);
+            this.ribbonPageGroup7.ItemLinks.Add(this.Btn_CekListesi);
+            this.ribbonPageGroup7.Name = "ribbonPageGroup7";
+            this.ribbonPageGroup7.Text = "Çek İşlemleri";
+            // 
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 435);
@@ -440,11 +546,240 @@
             this.xtraTabbedMdiManager1.MdiParent = this;
             this.xtraTabbedMdiManager1.UseFormIconAsPageImage = DevExpress.Utils.DefaultBoolean.True;
             // 
+            // navBarControl1
+            // 
+            this.navBarControl1.ActiveGroup = this.navBarGroup1;
+            this.navBarControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.navBarControl1.Groups.AddRange(new DevExpress.XtraNavBar.NavBarGroup[] {
+            this.navBarGroup1,
+            this.navBarGroup2,
+            this.navBarGroup3,
+            this.navBarGroup4,
+            this.navBarGroup5});
+            this.navBarControl1.Items.AddRange(new DevExpress.XtraNavBar.NavBarItem[] {
+            this.NavBTN_StokKarti,
+            this.NavBTN_StokListesi,
+            this.NavBTN_StokGrupları,
+            this.NavBTN_StokHareketleri,
+            this.NavBTN_CariAcilisKarti,
+            this.NavBTN_CariGrupları,
+            this.NavBTN_CariListesi,
+            this.NavBTN_CariHareketleri,
+            this.NavBTN_BankaAcilisKarti,
+            this.NavBTN_BankaListesi,
+            this.NavBTN_Bankaİslemi,
+            this.NavBTN_BankaHareketleri,
+            this.NavBTN_ParaTransferi,
+            this.NavBTN_KasaAcilisİslemi,
+            this.NavBTN_KasaListesi,
+            this.NavBTN_KasaDevirİslemKarti,
+            this.NavBTN_KasaTahsilatÖdeme,
+            this.NavBTN_KasaHareketleri});
+            this.navBarControl1.Location = new System.Drawing.Point(0, 158);
+            this.navBarControl1.Name = "navBarControl1";
+            this.navBarControl1.OptionsNavPane.ExpandedWidth = 140;
+            this.navBarControl1.Size = new System.Drawing.Size(140, 277);
+            this.navBarControl1.TabIndex = 3;
+            this.navBarControl1.Text = "navBarControl1";
+            this.navBarControl1.View = new DevExpress.XtraNavBar.ViewInfo.StandardSkinExplorerBarViewInfoRegistrator("Office 2010 Blue");
+            // 
+            // navBarGroup1
+            // 
+            this.navBarGroup1.Caption = "Stok";
+            this.navBarGroup1.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_StokKarti),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_StokListesi),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_StokGrupları),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_StokHareketleri)});
+            this.navBarGroup1.Name = "navBarGroup1";
+            // 
+            // NavBTN_StokKarti
+            // 
+            this.NavBTN_StokKarti.Caption = "Stok Kartı";
+            this.NavBTN_StokKarti.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_StokKarti.ImageOptions.LargeImage")));
+            this.NavBTN_StokKarti.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_StokKarti.ImageOptions.SmallImage")));
+            this.NavBTN_StokKarti.Name = "NavBTN_StokKarti";
+            this.NavBTN_StokKarti.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_StokKarti_LinkClicked);
+            // 
+            // NavBTN_StokListesi
+            // 
+            this.NavBTN_StokListesi.Caption = "Stok Listesi";
+            this.NavBTN_StokListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_StokListesi.ImageOptions.LargeImage")));
+            this.NavBTN_StokListesi.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_StokListesi.ImageOptions.SmallImage")));
+            this.NavBTN_StokListesi.Name = "NavBTN_StokListesi";
+            this.NavBTN_StokListesi.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_StokListesi_LinkClicked);
+            // 
+            // NavBTN_StokGrupları
+            // 
+            this.NavBTN_StokGrupları.Caption = "Stok Grupları";
+            this.NavBTN_StokGrupları.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_StokGrupları.ImageOptions.LargeImage")));
+            this.NavBTN_StokGrupları.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_StokGrupları.ImageOptions.SmallImage")));
+            this.NavBTN_StokGrupları.Name = "NavBTN_StokGrupları";
+            this.NavBTN_StokGrupları.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_StokGrupları_LinkClicked);
+            // 
+            // NavBTN_StokHareketleri
+            // 
+            this.NavBTN_StokHareketleri.Caption = "Stok Hareketleri";
+            this.NavBTN_StokHareketleri.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_StokHareketleri.ImageOptions.LargeImage")));
+            this.NavBTN_StokHareketleri.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_StokHareketleri.ImageOptions.SmallImage")));
+            this.NavBTN_StokHareketleri.Name = "NavBTN_StokHareketleri";
+            this.NavBTN_StokHareketleri.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_StokHareketleri_LinkClicked);
+            // 
+            // navBarGroup2
+            // 
+            this.navBarGroup2.Caption = "Cari";
+            this.navBarGroup2.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_CariAcilisKarti),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_CariGrupları),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_CariListesi),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_CariHareketleri)});
+            this.navBarGroup2.Name = "navBarGroup2";
+            // 
+            // NavBTN_CariAcilisKarti
+            // 
+            this.NavBTN_CariAcilisKarti.Caption = "Cari Açılış Kartı";
+            this.NavBTN_CariAcilisKarti.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_CariAcilisKarti.ImageOptions.LargeImage")));
+            this.NavBTN_CariAcilisKarti.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_CariAcilisKarti.ImageOptions.SmallImage")));
+            this.NavBTN_CariAcilisKarti.Name = "NavBTN_CariAcilisKarti";
+            this.NavBTN_CariAcilisKarti.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_CariAcilisKarti_LinkClicked);
+            // 
+            // NavBTN_CariGrupları
+            // 
+            this.NavBTN_CariGrupları.Caption = "Cari Grupları";
+            this.NavBTN_CariGrupları.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_CariGrupları.ImageOptions.LargeImage")));
+            this.NavBTN_CariGrupları.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_CariGrupları.ImageOptions.SmallImage")));
+            this.NavBTN_CariGrupları.Name = "NavBTN_CariGrupları";
+            this.NavBTN_CariGrupları.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_CariGrupları_LinkClicked);
+            // 
+            // NavBTN_CariListesi
+            // 
+            this.NavBTN_CariListesi.Caption = "Cari Lİstesi";
+            this.NavBTN_CariListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_CariListesi.ImageOptions.LargeImage")));
+            this.NavBTN_CariListesi.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_CariListesi.ImageOptions.SmallImage")));
+            this.NavBTN_CariListesi.Name = "NavBTN_CariListesi";
+            this.NavBTN_CariListesi.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_CariListesi_LinkClicked);
+            // 
+            // NavBTN_CariHareketleri
+            // 
+            this.NavBTN_CariHareketleri.Caption = "Cari Hareketleri";
+            this.NavBTN_CariHareketleri.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_CariHareketleri.ImageOptions.LargeImage")));
+            this.NavBTN_CariHareketleri.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_CariHareketleri.ImageOptions.SmallImage")));
+            this.NavBTN_CariHareketleri.Name = "NavBTN_CariHareketleri";
+            this.NavBTN_CariHareketleri.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_CariHareketleri_LinkClicked);
+            // 
+            // navBarGroup3
+            // 
+            this.navBarGroup3.Caption = "Banka";
+            this.navBarGroup3.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_BankaAcilisKarti),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_BankaListesi),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_Bankaİslemi),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_BankaHareketleri),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_ParaTransferi)});
+            this.navBarGroup3.Name = "navBarGroup3";
+            // 
+            // NavBTN_BankaAcilisKarti
+            // 
+            this.NavBTN_BankaAcilisKarti.Caption = "Banka Açılış Kartı";
+            this.NavBTN_BankaAcilisKarti.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_BankaAcilisKarti.ImageOptions.LargeImage")));
+            this.NavBTN_BankaAcilisKarti.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_BankaAcilisKarti.ImageOptions.SmallImage")));
+            this.NavBTN_BankaAcilisKarti.Name = "NavBTN_BankaAcilisKarti";
+            this.NavBTN_BankaAcilisKarti.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_BankaAcilisKarti_LinkClicked);
+            // 
+            // NavBTN_BankaListesi
+            // 
+            this.NavBTN_BankaListesi.Caption = "Banka Listesi";
+            this.NavBTN_BankaListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_BankaListesi.ImageOptions.LargeImage")));
+            this.NavBTN_BankaListesi.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_BankaListesi.ImageOptions.SmallImage")));
+            this.NavBTN_BankaListesi.Name = "NavBTN_BankaListesi";
+            this.NavBTN_BankaListesi.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_BankaListesi_LinkClicked);
+            // 
+            // NavBTN_Bankaİslemi
+            // 
+            this.NavBTN_Bankaİslemi.Caption = "Banka İşlemi";
+            this.NavBTN_Bankaİslemi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_Bankaİslemi.ImageOptions.LargeImage")));
+            this.NavBTN_Bankaİslemi.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_Bankaİslemi.ImageOptions.SmallImage")));
+            this.NavBTN_Bankaİslemi.Name = "NavBTN_Bankaİslemi";
+            this.NavBTN_Bankaİslemi.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_Bankaİslemi_LinkClicked);
+            // 
+            // NavBTN_BankaHareketleri
+            // 
+            this.NavBTN_BankaHareketleri.Caption = "Banka Hareketleri";
+            this.NavBTN_BankaHareketleri.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_BankaHareketleri.ImageOptions.LargeImage")));
+            this.NavBTN_BankaHareketleri.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_BankaHareketleri.ImageOptions.SmallImage")));
+            this.NavBTN_BankaHareketleri.Name = "NavBTN_BankaHareketleri";
+            this.NavBTN_BankaHareketleri.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_BankaHareketleri_LinkClicked);
+            // 
+            // NavBTN_ParaTransferi
+            // 
+            this.NavBTN_ParaTransferi.Caption = "Para Transferi";
+            this.NavBTN_ParaTransferi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_ParaTransferi.ImageOptions.LargeImage")));
+            this.NavBTN_ParaTransferi.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_ParaTransferi.ImageOptions.SmallImage")));
+            this.NavBTN_ParaTransferi.Name = "NavBTN_ParaTransferi";
+            this.NavBTN_ParaTransferi.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_ParaTransferi_LinkClicked);
+            // 
+            // navBarGroup4
+            // 
+            this.navBarGroup4.Caption = "Kasa";
+            this.navBarGroup4.ItemLinks.AddRange(new DevExpress.XtraNavBar.NavBarItemLink[] {
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_KasaAcilisİslemi),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_KasaListesi),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_KasaDevirİslemKarti),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_KasaTahsilatÖdeme),
+            new DevExpress.XtraNavBar.NavBarItemLink(this.NavBTN_KasaHareketleri)});
+            this.navBarGroup4.Name = "navBarGroup4";
+            // 
+            // NavBTN_KasaAcilisİslemi
+            // 
+            this.NavBTN_KasaAcilisİslemi.Caption = "Kasa Açılış İşlemi";
+            this.NavBTN_KasaAcilisİslemi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_KasaAcilisİslemi.ImageOptions.LargeImage")));
+            this.NavBTN_KasaAcilisİslemi.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_KasaAcilisİslemi.ImageOptions.SmallImage")));
+            this.NavBTN_KasaAcilisİslemi.Name = "NavBTN_KasaAcilisİslemi";
+            this.NavBTN_KasaAcilisİslemi.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_KasaAcilisİslemi_LinkClicked);
+            // 
+            // NavBTN_KasaListesi
+            // 
+            this.NavBTN_KasaListesi.Caption = "Kasa Listesi";
+            this.NavBTN_KasaListesi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_KasaListesi.ImageOptions.LargeImage")));
+            this.NavBTN_KasaListesi.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_KasaListesi.ImageOptions.SmallImage")));
+            this.NavBTN_KasaListesi.Name = "NavBTN_KasaListesi";
+            this.NavBTN_KasaListesi.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_KasaListesi_LinkClicked);
+            // 
+            // NavBTN_KasaDevirİslemKarti
+            // 
+            this.NavBTN_KasaDevirİslemKarti.Caption = "Kasa Devir İşlem Kartı";
+            this.NavBTN_KasaDevirİslemKarti.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_KasaDevirİslemKarti.ImageOptions.LargeImage")));
+            this.NavBTN_KasaDevirİslemKarti.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_KasaDevirİslemKarti.ImageOptions.SmallImage")));
+            this.NavBTN_KasaDevirİslemKarti.Name = "NavBTN_KasaDevirİslemKarti";
+            this.NavBTN_KasaDevirİslemKarti.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_KasaDevirİslemKarti_LinkClicked);
+            // 
+            // NavBTN_KasaTahsilatÖdeme
+            // 
+            this.NavBTN_KasaTahsilatÖdeme.Caption = "Kasa Tahsilat Ödeme";
+            this.NavBTN_KasaTahsilatÖdeme.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_KasaTahsilatÖdeme.ImageOptions.LargeImage")));
+            this.NavBTN_KasaTahsilatÖdeme.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_KasaTahsilatÖdeme.ImageOptions.SmallImage")));
+            this.NavBTN_KasaTahsilatÖdeme.Name = "NavBTN_KasaTahsilatÖdeme";
+            this.NavBTN_KasaTahsilatÖdeme.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_KasaTahsilatÖdeme_LinkClicked);
+            // 
+            // NavBTN_KasaHareketleri
+            // 
+            this.NavBTN_KasaHareketleri.Caption = "Kasa Hareketleri";
+            this.NavBTN_KasaHareketleri.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_KasaHareketleri.ImageOptions.LargeImage")));
+            this.NavBTN_KasaHareketleri.ImageOptions.SmallImage = ((System.Drawing.Image)(resources.GetObject("NavBTN_KasaHareketleri.ImageOptions.SmallImage")));
+            this.NavBTN_KasaHareketleri.Name = "NavBTN_KasaHareketleri";
+            this.NavBTN_KasaHareketleri.LinkClicked += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.NavBTN_KasaHareketleri_LinkClicked);
+            // 
+            // navBarGroup5
+            // 
+            this.navBarGroup5.Caption = "Fatura";
+            this.navBarGroup5.Name = "navBarGroup5";
+            // 
             // AnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(773, 459);
+            this.Controls.Add(this.navBarControl1);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
             this.IsMdiContainer = true;
@@ -453,8 +788,10 @@
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "AnaForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AnaForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -500,5 +837,37 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarButtonItem Btn_KasaHareketleri;
         private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
+        private DevExpress.XtraNavBar.NavBarControl navBarControl1;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup1;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_StokKarti;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_StokListesi;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_StokGrupları;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_StokHareketleri;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup2;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_CariAcilisKarti;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_CariGrupları;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_CariListesi;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_CariHareketleri;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup3;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_BankaAcilisKarti;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_BankaListesi;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_Bankaİslemi;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_BankaHareketleri;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_ParaTransferi;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup4;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_KasaAcilisİslemi;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_KasaListesi;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_KasaDevirİslemKarti;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_KasaTahsilatÖdeme;
+        private DevExpress.XtraNavBar.NavBarItem NavBTN_KasaHareketleri;
+        private DevExpress.XtraNavBar.NavBarGroup navBarGroup5;
+        private DevExpress.XtraBars.Alerter.AlertControl alertControl1;
+        private DevExpress.XtraBars.BarButtonItem Btn_MusteriCeki;
+        private DevExpress.XtraBars.BarButtonItem Btn_KendiCekimiz;
+        private DevExpress.XtraBars.BarButtonItem Btn_BankayaCekCikisi;
+        private DevExpress.XtraBars.BarButtonItem Btn_CariyeCekCikisi;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
+        private DevExpress.XtraBars.BarButtonItem Btn_CekListesi;
     }
 }

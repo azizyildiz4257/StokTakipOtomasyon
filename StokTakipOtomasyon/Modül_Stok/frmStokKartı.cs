@@ -34,6 +34,7 @@ namespace StokTakipOtomasyon.Modül_Stok
         private void frmStokKartı_Load(object sender, EventArgs e)
         {
             Txt_StokKodu.Text = Numara.StokKodNumarasi();
+            Mesajlar.FormAcilis(this.Text);
         }
 
         void Temizle()

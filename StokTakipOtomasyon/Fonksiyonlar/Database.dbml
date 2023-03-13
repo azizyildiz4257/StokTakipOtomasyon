@@ -222,4 +222,48 @@
       <Column Name="Bakiye" Type="System.Decimal" DbType="Decimal(38,2)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Tbl_Bordrolar" Member="Tbl_Bordrolars">
+    <Type Name="Tbl_Bordrolar">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Numara" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CariID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SaveUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SaveDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EditUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Cekler" Member="Tbl_Ceklers">
+    <Type Name="Tbl_Cekler">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BelgeNo" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CekNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tipi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AsilBorclu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AlinanCariID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VerilenCairID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ACKodu" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="VadeTarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Banka" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sube" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="HesapNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tutar" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="VerilenBanka_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VerilenBanka_Tarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VerilenBanka_BelgeNo" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="VerilenCari_Tarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="VerilenCari_BelgeNo" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Durumu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tahsil" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="BordroID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tarih" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SaveUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SaveDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EditUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

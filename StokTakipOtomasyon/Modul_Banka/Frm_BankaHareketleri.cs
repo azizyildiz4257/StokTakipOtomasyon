@@ -20,6 +20,7 @@ namespace StokTakipOtomasyon.Modul_Banka
 
         int BankaID = -1;
         int IslemID = -1;
+        string Evrak_Turu;
 
         public Frm_BankaHareketleri()
         {
@@ -63,6 +64,49 @@ namespace StokTakipOtomasyon.Modul_Banka
             int ID = frm.BankaListesi(true);
             if (ID > 0) BankaAc(ID);
             AnaForm.Aktarma = -1;
+        }
+
+        void Sec()
+        {
+            try
+            {
+                IslemID = int.Parse(gridView1.GetFocusedRowCellValue("Id").ToString());
+                Evrak_Turu = gridView1.GetFocusedRowCellValue("EvrakTuru").ToString();
+            }
+            catch (Exception)
+            {
+                IslemID = -1;
+                Evrak_Turu = "";
+            }
+        }
+        private void SagTik_Opening(object sender, CancelEventArgs e)   // ContextMenuStrip Sağ tik özelliği Ders 7 36:28
+        {
+            Sec();
+            if (IslemID > 0)
+            {
+                if (Evrak_Turu == "Banka İşlem")
+                {
+                    CMS_BankaIsleminiDuzenle.Enabled = true;
+                    CMS_BankaParaTransferiDuzenle.Enabled = false;
+                }
+                else if (Evrak_Turu == "Banka Havele" || Evrak_Turu == "Banka EFT")
+                {
+                    CMS_BankaIsleminiDuzenle.Enabled = false;
+                    CMS_BankaParaTransferiDuzenle.Enabled = true;
+                }
+            }
+        }
+
+        private void CMS_BankaIsleminiDuzenle_Click(object sender, EventArgs e)
+        {
+            frm.BankaIslem(true, IslemID);
+            Listele();
+        }
+
+        private void CMS_BankaParaTransferiDuzenle_Click(object sender, EventArgs e)
+        {
+            frm.BankaParaTransfer(true, IslemID);
+            Listele();
         }
     }
 }

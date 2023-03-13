@@ -10,9 +10,12 @@ namespace StokTakipOtomasyon.Fonksiyonlar
 {
     internal class Mesajlar
     {
+        AnaForm Mesajfrm = new AnaForm();
         public void YeniKayit(string Mesaj)
         {
-            MessageBox.Show(Mesaj, "Yeni Kayıt Girişi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Mesajfrm.Mesaj("Yeni Kayıt Girişi", Mesaj);     //Ders 7 1:14:05
+
+            //MessageBox.Show(Mesaj, "Yeni Kayıt Girişi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         public DialogResult Guncelle()
         {
@@ -24,11 +27,19 @@ namespace StokTakipOtomasyon.Fonksiyonlar
         }
         public void Guncelle(bool Guncelle) // Ders 1 1:10 DK
         {
-            MessageBox.Show("Kayıt güncellenmiştir.","Kayıt Güncelleme",MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Mesajfrm.Mesaj("Kayıt Güncelleme", "Kayıt Güncellenmiştir.");   //Ders 7 1:14:40 /*Buraya güncellemiş olduğumuz kayda ait verileri çekerek popup yarmıyla yazdırabiliriz.*/
+
+            //MessageBox.Show("Kayıt güncellenmiştir.","Kayıt Güncelleme",MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         public void Hata(Exception Hata)
         {
-            MessageBox.Show(Hata.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Mesajfrm.Mesaj("Hata Oluştu", Hata.Message);
+
+            //MessageBox.Show(Hata.Message, "Hata Oluştu", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        public void FormAcilis(string FromAdi)  //Ders 7 1:17:30 Olmasada olur.
+        {
+            Mesajfrm.Mesaj("", FromAdi + " formu açıldı.");
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using StokTakipOtomasyon;
+using StokTakipOtomasyon.Modül_Cek;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -132,6 +134,8 @@ namespace StokTakipOtomasyon.Fonksiyonlar
             frm.Show();
         }
         #endregion
+
+        #region Banka Formları
         public void BankaAcilisKarti()
         {
             Modul_Banka.Frm_BankaAcilisKarti frm = new Modul_Banka.Frm_BankaAcilisKarti();
@@ -161,15 +165,82 @@ namespace StokTakipOtomasyon.Fonksiyonlar
             }
             return AnaForm.Aktarma;
         }
-        public void BankaParaTransfer(bool  Ac = false, int ID = -1)    //Ders 6 1:41:40
+        public void BankaParaTransfer(bool Ac = false, int ID = -1)    //Ders 6 1:41:40
         {
             Modul_Banka.Frm_ParaTransferi frm = new Modul_Banka.Frm_ParaTransferi();
             if (Ac) frm.Ac(ID);
             frm.ShowDialog();
         }
-        //public void BankaHareketleri(bool Ac = false, int ID)
-        //{
+        public void BankaHareketleri(bool Ac = false, int ID = -1)
+        {
+            Modul_Banka.Frm_BankaHareketleri frm = new Modul_Banka.Frm_BankaHareketleri();
+            frm.MdiParent = AnaForm.ActiveForm;
+            if (Ac)
+            {
+                frm.BankaAc(ID);
+            }
+            frm.Show();
+        }
+        #endregion
 
-        //}
+        #region Çek Formları
+        public void KendiCekimiz(int id = 0, bool Ac = false)
+        {
+            Modül_Cek.Frm_KendiCekimiz frm = new Modül_Cek.Frm_KendiCekimiz();
+            //if (Ac) ;
+            frm.ShowDialog();
+        }
+
+        public void MusteriCeki(int id = 0, bool Ac = false)
+        {
+            Modül_Cek.Frm_MusteriCeki frm = new Modül_Cek.Frm_MusteriCeki();
+            //if (Ac) ;
+            frm.ShowDialog();
+        }
+
+        public void CariyeCekCikisi()
+        {
+            Modül_Cek.Frm_CariyeCekCikisi frm = new Modül_Cek.Frm_CariyeCekCikisi();
+            frm.ShowDialog();
+        }
+
+        public void BankayaCekCikisi()
+        {
+            Modül_Cek.Frm_BankayaCekCikisi frm = new Modül_Cek.Frm_BankayaCekCikisi();
+            frm.ShowDialog();
+        }
+        public int CekListesi(bool Secim = false)
+        {
+            Modül_Cek.Frm_CekListesi frm = new Modül_Cek.Frm_CekListesi();
+            if (Secim)
+            {
+                frm.Secim = true;
+                frm.ShowDialog();
+            }
+            else
+            {
+                foreach (DevExpress.XtraEditors.XtraForm K in AnaForm.ActiveForm.MdiChildren)
+                {
+                    if (K.Name == "Frm_CekListesi")
+                    {
+                        K.BringToFront();
+                        return AnaForm.Aktarma;
+                    }
+                }
+                frm.MdiParent = AnaForm.ActiveForm;
+                frm.Show();
+            }
+            return AnaForm.Aktarma;
+        }
+        #endregion
     }
 }
+
+//foreach (DevExpress.XtraEditors.XtraForm K in AnaForm.ActiveForm.MdiChildren)
+//{
+//    if (K.Name == "Frm_CekListesi")
+//    {
+//        K.BringToFront();
+//        return AnaForm.Aktarma;
+//    }
+//}

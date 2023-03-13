@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.Txt_Bakiye = new DevExpress.XtraEditors.TextEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -41,12 +42,15 @@
             this.Txt_HesapTürü_Adi = new DevExpress.XtraEditors.ButtonEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.Grd_Liste = new DevExpress.XtraGrid.GridControl();
+            this.SagTik = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.CMS_BankaIsleminiDuzenle = new System.Windows.Forms.ToolStripMenuItem();
+            this.CMS_BankaParaTransferiDuzenle = new System.Windows.Forms.ToolStripMenuItem();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.Id = new DevExpress.XtraGrid.Columns.GridColumn();
             this.BelgeNo = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EvrakTuru = new DevExpress.XtraGrid.Columns.GridColumn();
             this.EvrakID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.Giris = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Gırıs = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Cikis = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Aciklama = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Tarih = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -60,6 +64,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grd_Liste)).BeginInit();
+            this.SagTik.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -187,6 +192,7 @@
             // 
             // Grd_Liste
             // 
+            this.Grd_Liste.ContextMenuStrip = this.SagTik;
             this.Grd_Liste.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Grd_Liste.Location = new System.Drawing.Point(2, 23);
             this.Grd_Liste.MainView = this.gridView1;
@@ -196,6 +202,31 @@
             this.Grd_Liste.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // SagTik
+            // 
+            this.SagTik.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.CMS_BankaIsleminiDuzenle,
+            this.CMS_BankaParaTransferiDuzenle});
+            this.SagTik.Name = "SagTik";
+            this.SagTik.Size = new System.Drawing.Size(235, 48);
+            this.SagTik.Opening += new System.ComponentModel.CancelEventHandler(this.SagTik_Opening);
+            // 
+            // CMS_BankaIsleminiDuzenle
+            // 
+            this.CMS_BankaIsleminiDuzenle.Enabled = false;
+            this.CMS_BankaIsleminiDuzenle.Name = "CMS_BankaIsleminiDuzenle";
+            this.CMS_BankaIsleminiDuzenle.Size = new System.Drawing.Size(234, 22);
+            this.CMS_BankaIsleminiDuzenle.Text = "Banka İşlemini Düzenle";
+            this.CMS_BankaIsleminiDuzenle.Click += new System.EventHandler(this.CMS_BankaIsleminiDuzenle_Click);
+            // 
+            // CMS_BankaParaTransferiDuzenle
+            // 
+            this.CMS_BankaParaTransferiDuzenle.Enabled = false;
+            this.CMS_BankaParaTransferiDuzenle.Name = "CMS_BankaParaTransferiDuzenle";
+            this.CMS_BankaParaTransferiDuzenle.Size = new System.Drawing.Size(234, 22);
+            this.CMS_BankaParaTransferiDuzenle.Text = "Banka Para Transferini Düzenle";
+            this.CMS_BankaParaTransferiDuzenle.Click += new System.EventHandler(this.CMS_BankaParaTransferiDuzenle_Click);
+            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -203,7 +234,7 @@
             this.BelgeNo,
             this.EvrakTuru,
             this.EvrakID,
-            this.Giris,
+            this.Gırıs,
             this.Cikis,
             this.Aciklama,
             this.Tarih});
@@ -245,16 +276,16 @@
             this.EvrakID.FieldName = "EvrakID";
             this.EvrakID.Name = "EvrakID";
             // 
-            // Giris
+            // Gırıs
             // 
-            this.Giris.Caption = "Giriş";
-            this.Giris.FieldName = "Giris";
-            this.Giris.Name = "Giris";
-            this.Giris.OptionsColumn.AllowEdit = false;
-            this.Giris.OptionsColumn.AllowFocus = false;
-            this.Giris.OptionsColumn.FixedWidth = true;
-            this.Giris.Visible = true;
-            this.Giris.VisibleIndex = 3;
+            this.Gırıs.Caption = "Giriş";
+            this.Gırıs.FieldName = "Gırıs";
+            this.Gırıs.Name = "Gırıs";
+            this.Gırıs.OptionsColumn.AllowEdit = false;
+            this.Gırıs.OptionsColumn.AllowFocus = false;
+            this.Gırıs.OptionsColumn.FixedWidth = true;
+            this.Gırıs.Visible = true;
+            this.Gırıs.VisibleIndex = 3;
             // 
             // Cikis
             // 
@@ -315,6 +346,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Grd_Liste)).EndInit();
+            this.SagTik.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -339,10 +371,13 @@
         private DevExpress.XtraGrid.Columns.GridColumn BelgeNo;
         private DevExpress.XtraGrid.Columns.GridColumn EvrakTuru;
         private DevExpress.XtraGrid.Columns.GridColumn EvrakID;
-        private DevExpress.XtraGrid.Columns.GridColumn Giris;
+        private DevExpress.XtraGrid.Columns.GridColumn Gırıs;
         private DevExpress.XtraGrid.Columns.GridColumn Cikis;
         private DevExpress.XtraGrid.Columns.GridColumn Aciklama;
         private DevExpress.XtraEditors.ButtonEdit Txt_HesapTürü_Adi;
         private DevExpress.XtraGrid.Columns.GridColumn Tarih;
+        private System.Windows.Forms.ContextMenuStrip SagTik;
+        private System.Windows.Forms.ToolStripMenuItem CMS_BankaIsleminiDuzenle;
+        private System.Windows.Forms.ToolStripMenuItem CMS_BankaParaTransferiDuzenle;
     }
 }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Database">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12.125, 8.5" name="Database">
   <DataContextMoniker Name="/DatabaseDataContext" />
   <nestedChildShapes>
     <classShape Id="3a030e73-6790-4174-9a65-4334f65c5840" isExpanded="false" absoluteBounds="0.5, 0.5, 2, 0.45">
@@ -90,6 +90,18 @@
       <DataClassMoniker Name="/DatabaseDataContext/VW_BankaListesi" />
       <nestedChildShapes>
         <elementListCompartment Id="4edda1e3-0d3f-4d9d-9789-569da87184ca" absoluteBounds="2.8899999999999997, 4.71, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4bc556ee-9259-4c66-b00d-06e6e41f82a2" isExpanded="false" absoluteBounds="9.875, 1, 2, 0.45">
+      <DataClassMoniker Name="/DatabaseDataContext/Tbl_Bordrolar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f795b7a-2a61-484f-9fc8-0d6d9247476a" absoluteBounds="9.89, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3f386601-c4be-4de6-bcda-2add0b429b0c" isExpanded="false" absoluteBounds="9.875, 0.5, 2, 0.45">
+      <DataClassMoniker Name="/DatabaseDataContext/Tbl_Cekler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f3d3dee0-0f0b-4742-8e35-271c3ff0ea7e" absoluteBounds="9.89, 0.96, 1.9700000000000002, 5.4415283203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
