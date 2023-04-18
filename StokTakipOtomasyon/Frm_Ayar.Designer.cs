@@ -32,25 +32,25 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.Btn_AyarlarıKaydet = new DevExpress.XtraEditors.SimpleButton();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.Txt_Database = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.Txt_Sunucu = new DevExpress.XtraEditors.TextEdit();
+            this.Chck_YeniGiris = new DevExpress.XtraEditors.CheckEdit();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.Txt_Password = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.Txt_UserID = new DevExpress.XtraEditors.TextEdit();
-            this.Chck_YeniGiris = new DevExpress.XtraEditors.CheckEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.Btn_AyarlarıKaydet = new DevExpress.XtraEditors.SimpleButton();
+            this.Txt_Database = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.Txt_Sunucu = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Txt_Database.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Txt_Sunucu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Chck_YeniGiris.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_Password.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_UserID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Chck_YeniGiris.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Txt_Database.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Txt_Sunucu.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -66,21 +66,23 @@
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelControl1.Appearance.ForeColor = System.Drawing.Color.DarkRed;
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(147, 36);
+            this.labelControl1.Appearance.Options.UseForeColor = true;
+            this.labelControl1.Location = new System.Drawing.Point(126, 38);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(26, 17);
+            this.labelControl1.Size = new System.Drawing.Size(23, 13);
             this.labelControl1.TabIndex = 25;
             this.labelControl1.Text = "Text";
             // 
             // labelControl4
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.labelControl4.Appearance.Options.UseFont = true;
-            this.labelControl4.Location = new System.Drawing.Point(14, 36);
+            this.labelControl4.Location = new System.Drawing.Point(12, 37);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(115, 17);
+            this.labelControl4.Size = new System.Drawing.Size(108, 15);
             this.labelControl4.TabIndex = 22;
             this.labelControl4.Text = "Connection String :";
             // 
@@ -103,52 +105,16 @@
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Yeni Bağlantı Bilgileri";
             // 
-            // Btn_AyarlarıKaydet
+            // Chck_YeniGiris
             // 
-            this.Btn_AyarlarıKaydet.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Btn_AyarlarıKaydet.Appearance.Options.UseFont = true;
-            this.Btn_AyarlarıKaydet.Enabled = false;
-            this.Btn_AyarlarıKaydet.Location = new System.Drawing.Point(301, 89);
-            this.Btn_AyarlarıKaydet.Name = "Btn_AyarlarıKaydet";
-            this.Btn_AyarlarıKaydet.Size = new System.Drawing.Size(115, 26);
-            this.Btn_AyarlarıKaydet.TabIndex = 24;
-            this.Btn_AyarlarıKaydet.Text = "Ayarları Kaydet";
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(14, 61);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(62, 17);
-            this.labelControl2.TabIndex = 29;
-            this.labelControl2.Text = "Database :";
-            // 
-            // Txt_Database
-            // 
-            this.Txt_Database.Enabled = false;
-            this.Txt_Database.Location = new System.Drawing.Point(92, 61);
-            this.Txt_Database.Name = "Txt_Database";
-            this.Txt_Database.Size = new System.Drawing.Size(115, 20);
-            this.Txt_Database.TabIndex = 30;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(14, 35);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(52, 17);
-            this.labelControl3.TabIndex = 27;
-            this.labelControl3.Text = "Sunucu :";
-            // 
-            // Txt_Sunucu
-            // 
-            this.Txt_Sunucu.Enabled = false;
-            this.Txt_Sunucu.Location = new System.Drawing.Point(92, 35);
-            this.Txt_Sunucu.Name = "Txt_Sunucu";
-            this.Txt_Sunucu.Size = new System.Drawing.Size(115, 20);
-            this.Txt_Sunucu.TabIndex = 28;
+            this.Chck_YeniGiris.Location = new System.Drawing.Point(207, 95);
+            this.Chck_YeniGiris.Name = "Chck_YeniGiris";
+            this.Chck_YeniGiris.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Chck_YeniGiris.Properties.Appearance.Options.UseFont = true;
+            this.Chck_YeniGiris.Properties.Caption = "Yeni Giriş";
+            this.Chck_YeniGiris.Size = new System.Drawing.Size(78, 20);
+            this.Chck_YeniGiris.TabIndex = 35;
+            this.Chck_YeniGiris.CheckedChanged += new System.EventHandler(this.Chck_YeniGiris_CheckedChanged);
             // 
             // labelControl5
             // 
@@ -186,16 +152,53 @@
             this.Txt_UserID.Size = new System.Drawing.Size(115, 20);
             this.Txt_UserID.TabIndex = 32;
             // 
-            // Chck_YeniGiris
+            // labelControl2
             // 
-            this.Chck_YeniGiris.Location = new System.Drawing.Point(207, 95);
-            this.Chck_YeniGiris.Name = "Chck_YeniGiris";
-            this.Chck_YeniGiris.Properties.Appearance.Font = new System.Drawing.Font("Calibri", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Chck_YeniGiris.Properties.Appearance.Options.UseFont = true;
-            this.Chck_YeniGiris.Properties.Caption = "Yeni Giriş";
-            this.Chck_YeniGiris.Size = new System.Drawing.Size(78, 20);
-            this.Chck_YeniGiris.TabIndex = 35;
-            this.Chck_YeniGiris.CheckedChanged += new System.EventHandler(this.Chck_YeniGiris_CheckedChanged);
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl2.Appearance.Options.UseFont = true;
+            this.labelControl2.Location = new System.Drawing.Point(14, 61);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(62, 17);
+            this.labelControl2.TabIndex = 29;
+            this.labelControl2.Text = "Database :";
+            // 
+            // Btn_AyarlarıKaydet
+            // 
+            this.Btn_AyarlarıKaydet.Appearance.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Btn_AyarlarıKaydet.Appearance.Options.UseFont = true;
+            this.Btn_AyarlarıKaydet.Enabled = false;
+            this.Btn_AyarlarıKaydet.Location = new System.Drawing.Point(301, 89);
+            this.Btn_AyarlarıKaydet.Name = "Btn_AyarlarıKaydet";
+            this.Btn_AyarlarıKaydet.Size = new System.Drawing.Size(115, 26);
+            this.Btn_AyarlarıKaydet.TabIndex = 24;
+            this.Btn_AyarlarıKaydet.Text = "Ayarları Kaydet";
+            this.Btn_AyarlarıKaydet.Click += new System.EventHandler(this.Btn_AyarlarıKaydet_Click);
+            // 
+            // Txt_Database
+            // 
+            this.Txt_Database.Enabled = false;
+            this.Txt_Database.Location = new System.Drawing.Point(92, 61);
+            this.Txt_Database.Name = "Txt_Database";
+            this.Txt_Database.Size = new System.Drawing.Size(115, 20);
+            this.Txt_Database.TabIndex = 30;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.labelControl3.Appearance.Options.UseFont = true;
+            this.labelControl3.Location = new System.Drawing.Point(14, 35);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(52, 17);
+            this.labelControl3.TabIndex = 27;
+            this.labelControl3.Text = "Sunucu :";
+            // 
+            // Txt_Sunucu
+            // 
+            this.Txt_Sunucu.Enabled = false;
+            this.Txt_Sunucu.Location = new System.Drawing.Point(92, 35);
+            this.Txt_Sunucu.Name = "Txt_Sunucu";
+            this.Txt_Sunucu.Size = new System.Drawing.Size(115, 20);
+            this.Txt_Sunucu.TabIndex = 28;
             // 
             // Frm_Ayar
             // 
@@ -207,17 +210,18 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Frm_Ayar";
             this.Text = "Bağlantı Ayarları";
+            this.Load += new System.EventHandler(this.Frm_Ayar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Txt_Database.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Txt_Sunucu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Chck_YeniGiris.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_Password.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_UserID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Chck_YeniGiris.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Txt_Database.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Txt_Sunucu.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

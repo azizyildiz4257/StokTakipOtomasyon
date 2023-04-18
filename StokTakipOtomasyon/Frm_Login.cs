@@ -13,21 +13,36 @@ namespace StokTakipOtomasyon
 {
     public partial class Frm_Login : DevExpress.XtraEditors.XtraForm
     {
+        Fonksiyonlar.DatabaseDataContext Db = new Fonksiyonlar.DatabaseDataContext();
+        Fonksiyonlar.Mesajlar mesajlar = new Fonksiyonlar.Mesajlar();
+
         public Frm_Login()
         {
             InitializeComponent();
+            Txt_KullaniciAdi.Focus();
         }
 
         private void Btn_Giris_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            AnaForm frm=new AnaForm();
-            frm.ShowDialog();
+            try
+            {
+                Fonksiyonlar.Tbl_Kullanicilar Kullanici = Db.Tbl_Kullanicilars.First(s => s.Kullanici == Txt_KullaniciAdi.Text.Trim() && s.Sifre == Txt_Sifre.Text.Trim());
+                Kullanici.LastLogin = DateTime.Now;
+                Db.SubmitChanges();
+                this.Hide();
+                AnaForm frm = new AnaForm(Kullanici);   //Kullanıcıyı anaforma gönderiyoruz. Ders 18 1:22:58
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Giriş yapılamadı. Kullanıcı Adı veya Şifre hatalı Lütfen tekrar deneyiniz. " + ex.Message);
+                return;
+            }
         }
 
         private void Btn_Ayar_Click(object sender, EventArgs e)
         {
-            Frm_Ayar frm=new Frm_Ayar();
+            Frm_Ayar frm = new Frm_Ayar();
             frm.ShowDialog();
         }
     }

@@ -266,4 +266,109 @@
       <Column Name="EditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Tbl_StokHareketleri" Member="Tbl_StokHareketleris">
+    <Type Name="Tbl_StokHareketleri">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FaturaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IrsaliyeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StokKodu" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="GCKodu" Type="System.String" DbType="NVarChar(1)" CanBeNull="true" />
+      <Column Name="Miktar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BirimFiyat" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="KDV" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="Tipi" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="SaveUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SaveDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EditUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SiparisID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Faturalar" Member="Tbl_Faturalars">
+    <Type Name="Tbl_Faturalar">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FaturaTuru" Type="System.String" DbType="NVarChar(25)" CanBeNull="true" />
+      <Column Name="FaturaSeri" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="FaturaNo" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="IrsaliyeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CariKodu" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Tarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="GenelToplam" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="OdemeYeri" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="OdemeYeriID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SaveUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SaveDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EditUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Irsaliyeler" Member="Tbl_Irsaliyelers">
+    <Type Name="Tbl_Irsaliyeler">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IrsaliyeSeri" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="IrsaliyeNo" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="FaturaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CariKodu" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Tarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SaveUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SaveDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EditUser" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_Kalemler" Member="VW_Kalemlers">
+    <Type Name="VW_Kalemler">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StokID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FaturaID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IrsaliyeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StokKodu" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="StokAdı" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StokBarkod" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="StokBirim" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="BirimFiyat" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="KDV" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="Miktar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Toplam" Type="System.Decimal" DbType="Decimal(29,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tbl_Kullanicilar" Member="Tbl_Kullanicilars">
+    <Type Name="Tbl_Kullanicilar">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Kullanici" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Sifre" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="İsim" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Soyisim" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Aktif" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Kodu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SaveDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EditDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastLogin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VW_Faturalar" Member="VW_Faturalars">
+    <Type Name="VW_Faturalar">
+      <Column Name="CariKodu" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="CariAdi" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="VergiDairesi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="VergiNo" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Sehir" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Ilce" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Adres" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FaturaNo" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="Tarihi" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Aciklama" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="GenelToplam" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="StokKodu" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="StokAdı" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StokBirim" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="BirimFiyat" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="KDV" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="StokBarkod" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Miktar" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Toplam" Type="System.Decimal" DbType="Decimal(29,2)" CanBeNull="true" />
+    </Type>
+  </Table>
 </Database>

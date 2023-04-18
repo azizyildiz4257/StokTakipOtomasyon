@@ -33,21 +33,30 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v22.1.Core, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.Desktop.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Drawing.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Images.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v22.1.Core, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Pdf.v22.1.Core, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.PivotGrid.v22.1.Core, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Printing.v22.1.Core, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.RichEdit.v22.1.Core, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v22.1.Export, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v22.1.Core, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.1.UI, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v22.1.Core, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraNavBar.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v22.1.Extensions, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraRichEdit.v22.1, Version=22.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -68,6 +77,11 @@
     </Compile>
     <Compile Include="AnaForm.Designer.cs">
       <DependentUpon>AnaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetler.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetler.xsd</DependentUpon>
     </Compile>
     <Compile Include="Fonksiyonlar\Database.designer.cs">
       <AutoGen>True</AutoGen>
@@ -186,6 +200,12 @@
     <Compile Include="Modül_Fatura\Frm_SatisFaturasi.Designer.cs">
       <DependentUpon>Frm_SatisFaturasi.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modül_Fatura\Rpr_SatisFaturasi.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Modül_Fatura\Rpr_SatisFaturasi.Designer.cs">
+      <DependentUpon>Rpr_SatisFaturasi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modül_Kasa\Frm_KasaAcilisKarti.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,6 +236,18 @@
     <Compile Include="Modül_Kasa\Frm_KasaTahsilatÖdeme.Designer.cs">
       <DependentUpon>Frm_KasaTahsilatÖdeme.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modül_Kullanici\Frm_KullaniciPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Kullanici\Frm_KullaniciPanel.Designer.cs">
+      <DependentUpon>Frm_KullaniciPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modül_Kullanici\Frm_KullaniciYönetimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modül_Kullanici\Frm_KullaniciYönetimi.Designer.cs">
+      <DependentUpon>Frm_KullaniciYönetimi.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modül_Stok\frmStokGrupları.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,6 +277,17 @@
     <EmbeddedResource Include="AnaForm.resx">
       <DependentUpon>AnaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSetler.xsc">
+      <DependentUpon>DataSetler.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetler.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetler.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetler.xss">
+      <DependentUpon>DataSetler.xsd</DependentUpon>
+    </None>
     <None Include="Fonksiyonlar\Database.dbml.layout">
       <DependentUpon>Database.dbml</DependentUpon>
     </None>
@@ -302,6 +345,9 @@
     <EmbeddedResource Include="Modül_Fatura\Frm_SatisFaturasi.resx">
       <DependentUpon>Frm_SatisFaturasi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Fatura\Rpr_SatisFaturasi.resx">
+      <DependentUpon>Rpr_SatisFaturasi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modül_Kasa\Frm_KasaAcilisKarti.resx">
       <DependentUpon>Frm_KasaAcilisKarti.cs</DependentUpon>
     </EmbeddedResource>
@@ -316,6 +362,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Modül_Kasa\Frm_KasaTahsilatÖdeme.resx">
       <DependentUpon>Frm_KasaTahsilatÖdeme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Kullanici\Frm_KullaniciPanel.resx">
+      <DependentUpon>Frm_KullaniciPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modül_Kullanici\Frm_KullaniciYönetimi.resx">
+      <DependentUpon>Frm_KullaniciYönetimi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modül_Stok\frmStokGrupları.resx">
       <DependentUpon>frmStokGrupları.cs</DependentUpon>

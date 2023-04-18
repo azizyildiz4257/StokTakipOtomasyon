@@ -60,6 +60,11 @@
             this.Btn_BankayaCekCikisi = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_CariyeCekCikisi = new DevExpress.XtraBars.BarButtonItem();
             this.Btn_CekListesi = new DevExpress.XtraBars.BarButtonItem();
+            this.Btn_Kullanici = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
+            this.Txt_AltKullanici = new DevExpress.XtraBars.BarButtonItem();
+            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
+            this.repositoryItemHypertextLabel1 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
@@ -101,6 +106,7 @@
             this.navBarGroup5 = new DevExpress.XtraNavBar.NavBarGroup();
             this.alertControl1 = new DevExpress.XtraBars.Alerter.AlertControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).BeginInit();
             this.SuspendLayout();
@@ -139,9 +145,13 @@
             this.Btn_KendiCekimiz,
             this.Btn_BankayaCekCikisi,
             this.Btn_CariyeCekCikisi,
-            this.Btn_CekListesi});
+            this.Btn_CekListesi,
+            this.Btn_Kullanici,
+            this.barButtonItem1,
+            this.Txt_AltKullanici,
+            this.barEditItem1});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 30;
+            this.ribbon.MaxItemId = 34;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
@@ -150,6 +160,9 @@
             this.ribbonPage4,
             this.ribbonPage5,
             this.ribbonPage6});
+            this.ribbon.QuickToolbarItemLinks.Add(this.Btn_Kullanici);
+            this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemHypertextLabel1});
             this.ribbon.Size = new System.Drawing.Size(773, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
@@ -321,6 +334,7 @@
             this.Btn_SatisFaturasi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_SatisFaturasi.ImageOptions.LargeImage")));
             this.Btn_SatisFaturasi.LargeWidth = 60;
             this.Btn_SatisFaturasi.Name = "Btn_SatisFaturasi";
+            this.Btn_SatisFaturasi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_SatisFaturasi_ItemClick);
             // 
             // Btn_SatisIadeFaturasi
             // 
@@ -330,6 +344,7 @@
             this.Btn_SatisIadeFaturasi.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_SatisIadeFaturasi.ImageOptions.LargeImage")));
             this.Btn_SatisIadeFaturasi.LargeWidth = 60;
             this.Btn_SatisIadeFaturasi.Name = "Btn_SatisIadeFaturasi";
+            this.Btn_SatisIadeFaturasi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_SatisIadeFaturasi_ItemClick);
             // 
             // Btn_AlisFaturasi
             // 
@@ -425,6 +440,37 @@
             this.Btn_CekListesi.LargeWidth = 75;
             this.Btn_CekListesi.Name = "Btn_CekListesi";
             this.Btn_CekListesi.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_CekListesi_ItemClick);
+            // 
+            // Btn_Kullanici
+            // 
+            this.Btn_Kullanici.Caption = "Kullanıcı";
+            this.Btn_Kullanici.Id = 30;
+            this.Btn_Kullanici.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("Btn_Kullanici.ImageOptions.Image")));
+            this.Btn_Kullanici.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("Btn_Kullanici.ImageOptions.LargeImage")));
+            this.Btn_Kullanici.Name = "Btn_Kullanici";
+            this.Btn_Kullanici.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.Btn_Kullanici_ItemClick);
+            // 
+            // barButtonItem1
+            // 
+            this.barButtonItem1.Caption = "Kullanıcı :";
+            this.barButtonItem1.Id = 31;
+            this.barButtonItem1.Name = "barButtonItem1";
+            // 
+            // Txt_AltKullanici
+            // 
+            this.Txt_AltKullanici.Id = 32;
+            this.Txt_AltKullanici.Name = "Txt_AltKullanici";
+            // 
+            // barEditItem1
+            // 
+            this.barEditItem1.Caption = "barEditItem1";
+            this.barEditItem1.Edit = this.repositoryItemHypertextLabel1;
+            this.barEditItem1.Id = 33;
+            this.barEditItem1.Name = "barEditItem1";
+            // 
+            // repositoryItemHypertextLabel1
+            // 
+            this.repositoryItemHypertextLabel1.Name = "repositoryItemHypertextLabel1";
             // 
             // ribbonPage1
             // 
@@ -535,6 +581,8 @@
             // 
             // ribbonStatusBar
             // 
+            this.ribbonStatusBar.ItemLinks.Add(this.barButtonItem1);
+            this.ribbonStatusBar.ItemLinks.Add(this.Txt_AltKullanici);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 435);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
@@ -790,6 +838,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AnaForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.navBarControl1)).EndInit();
             this.ResumeLayout(false);
@@ -869,5 +918,10 @@
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
         private DevExpress.XtraBars.BarButtonItem Btn_CekListesi;
+        private DevExpress.XtraBars.BarButtonItem Btn_Kullanici;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem Txt_AltKullanici;
+        private DevExpress.XtraBars.BarEditItem barEditItem1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel repositoryItemHypertextLabel1;
     }
 }

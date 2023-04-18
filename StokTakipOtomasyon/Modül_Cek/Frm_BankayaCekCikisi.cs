@@ -87,7 +87,7 @@ namespace StokTakipOtomasyon.Modül_Cek
             {
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 Fonksiyonlar.Tbl_BankaHareketleri bankaHareketleri = new Fonksiyonlar.Tbl_BankaHareketleri();
                 bankaHareketleri.Aciklama = Txt_BelgeNo.Text + "belge numaralı" + Txt_CekNo.Text + "numaralı çekin bankaya çıkışı";

@@ -233,6 +233,45 @@ namespace StokTakipOtomasyon.Fonksiyonlar
             return AnaForm.Aktarma;
         }
         #endregion
+
+        public void Fatura(bool Ac = false, int FaturaID = -1, bool Irsaliye = false)      //Ders 14 27:17 - Ders 16 3:00
+        {
+            Modül_Fatura.Frm_SatisFaturasi frm = new Modül_Fatura.Frm_SatisFaturasi(Ac, FaturaID, Irsaliye);
+            //if (Ac)
+            //{
+            //    frm = new Modül_Fatura.Frm_SatisFaturasi(Ac, FaturaID);
+            //}
+            //else
+            //{
+            //    frm = new Modül_Fatura.Frm_SatisFaturasi();
+            //}
+
+            frm.MdiParent = AnaForm.ActiveForm;
+            frm.Show();
+        }
+
+        public void FaturaListesi(bool Secim = false)   //Ders 16 35:40
+        {
+            Modül_Fatura.Frm_FaturaListesi frm = new Modül_Fatura.Frm_FaturaListesi(Secim);
+            if (Secim) frm.ShowDialog();
+            else
+            {
+                frm.MdiParent = AnaForm.ActiveForm;
+                frm.Show();
+            }
+        }
+
+        public void KullaniciYonetimi()   //Ders 18 58:53
+        {
+            Modül_Kullanici.Frm_KullaniciYönetimi frm = new Modül_Kullanici.Frm_KullaniciYönetimi();
+            frm.ShowDialog();
+        }
+
+        public void KullaniciPanel(int ID = -1, bool Ac = false)    /*Form constructor'nda tanımlamış olduğumuz parametreleri burda da tanımlıyoruz  Ders 18 1:00:40*/
+        {
+            Modül_Kullanici.Frm_KullaniciPanel frm = new Modül_Kullanici.Frm_KullaniciPanel(ID, Ac);
+            frm.ShowDialog();
+        }
     }
 }
 

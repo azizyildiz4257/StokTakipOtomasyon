@@ -86,7 +86,7 @@ namespace StokTakipOtomasyon.Modül_Stok
                 Stok.StokBirim = Cmb_Birim.Text;
                 Stok.StokGrupID = GrupID;
                 Stok.StokKodu = Txt_StokKodu.Text;
-                Stok.StokResim = new System.Data.Linq.Binary(Resimleme.ResimYukleme(pictureBox1.Image)); // Resmi bu şekilde aldığımız zaman binary halinde veritabanına yüklemiş olacağız. Ders 1 2:06
+                if(Resimsecim)Stok.StokResim = new System.Data.Linq.Binary(Resimleme.ResimYukleme(pictureBox1.Image)); // Resmi bu şekilde aldığımız zaman binary halinde veritabanına yüklemiş olacağız. Ders 1 2:06
                 Stok.StokSatisFiyat = decimal.Parse(Txt_SatısFiyatı.Text);
                 Stok.StokSatisKDV = decimal.Parse(Txt_SatısKDV.Text);
                 Stok.StokSaveDate = DateTime.Now;

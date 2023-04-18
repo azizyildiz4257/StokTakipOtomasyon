@@ -50,10 +50,11 @@
             // 
             // Txt_KullaniciAdi
             // 
+            this.Txt_KullaniciAdi.EditValue = "tekbiryazilim";
             this.Txt_KullaniciAdi.Location = new System.Drawing.Point(106, 12);
             this.Txt_KullaniciAdi.Name = "Txt_KullaniciAdi";
             this.Txt_KullaniciAdi.Size = new System.Drawing.Size(115, 20);
-            this.Txt_KullaniciAdi.TabIndex = 17;
+            this.Txt_KullaniciAdi.TabIndex = 0;
             // 
             // Btn_Ayar
             // 
@@ -62,7 +63,7 @@
             this.Btn_Ayar.Location = new System.Drawing.Point(13, 65);
             this.Btn_Ayar.Name = "Btn_Ayar";
             this.Btn_Ayar.Size = new System.Drawing.Size(100, 26);
-            this.Btn_Ayar.TabIndex = 18;
+            this.Btn_Ayar.TabIndex = 3;
             this.Btn_Ayar.Text = "Ayar";
             this.Btn_Ayar.Click += new System.EventHandler(this.Btn_Ayar_Click);
             // 
@@ -80,8 +81,9 @@
             // 
             this.Txt_Sifre.Location = new System.Drawing.Point(106, 38);
             this.Txt_Sifre.Name = "Txt_Sifre";
+            this.Txt_Sifre.Properties.PasswordChar = '•';
             this.Txt_Sifre.Size = new System.Drawing.Size(115, 20);
-            this.Txt_Sifre.TabIndex = 20;
+            this.Txt_Sifre.TabIndex = 1;
             // 
             // Btn_Giris
             // 
@@ -90,12 +92,13 @@
             this.Btn_Giris.Location = new System.Drawing.Point(121, 65);
             this.Btn_Giris.Name = "Btn_Giris";
             this.Btn_Giris.Size = new System.Drawing.Size(100, 26);
-            this.Btn_Giris.TabIndex = 21;
+            this.Btn_Giris.TabIndex = 2;
             this.Btn_Giris.Text = "Giriş";
             this.Btn_Giris.Click += new System.EventHandler(this.Btn_Giris_Click);
             // 
             // Frm_Login
             // 
+            this.AcceptButton = this.Btn_Giris;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(238, 107);
@@ -108,7 +111,8 @@
             this.Controls.Add(this.Txt_KullaniciAdi);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Frm_Login";
-            this.Text = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Giriş";
             ((System.ComponentModel.ISupportInitialize)(this.Txt_KullaniciAdi.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Txt_Sifre.Properties)).EndInit();
             this.ResumeLayout(false);

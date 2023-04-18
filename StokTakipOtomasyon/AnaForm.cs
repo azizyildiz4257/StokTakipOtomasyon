@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraBars;
+﻿using DevExpress.Pdf;
+using DevExpress.XtraBars;
 using DevExpress.XtraRichEdit.Commands.Internal;
 using StokTakipOtomasyon.Fonksiyonlar;
 using System;
@@ -17,11 +18,26 @@ namespace StokTakipOtomasyon
     {
         Fonksiyonlar.Formlar formlar = new Fonksiyonlar.Formlar();
 
+        public static Fonksiyonlar.Tbl_Kullanicilar Kullanici;   //Ders 18 1:11:10
         public static int UserID = -1;
         public static int Aktarma = 1;
+
         public AnaForm()
         {
             InitializeComponent();
+        }
+
+        public AnaForm(Fonksiyonlar.Tbl_Kullanicilar GelenKullanici)
+        {
+            InitializeComponent();
+            Kullanici = GelenKullanici;
+            UserID = Kullanici.Id;
+            Txt_AltKullanici.Caption = Kullanici.Kullanici;
+            if (Kullanici.Kodu == "Personel")
+            {   //Sıradan kullanıcalar için butonu gizliyoruz. Ders 18 1:15:31
+                Btn_Kullanici.Visibility = BarItemVisibility.Never;
+            }
+            /*Kapatmak istediğimiz nesneleri bu yöntemle kapatabilriz Ders 18 1:16:45*/
         }
 
         public void Mesaj(string baslik, string mesaj)  //Ders 7 1:12:35
@@ -236,6 +252,21 @@ namespace StokTakipOtomasyon
         {
             Application.Exit();    //Ders 13 2:18
             /*Anaform artık application form olmayacağı için anaformu kapattığımızda applicationdan çıkmayacak. Yani uygulamayı kapatmayacak.*/
+        }
+
+        private void Btn_SatisFaturasi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            formlar.Fatura();
+        }
+
+        private void Btn_SatisIadeFaturasi_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            formlar.FaturaListesi();
+        }
+
+        private void Btn_Kullanici_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            formlar.KullaniciYonetimi();
         }
     }
 }

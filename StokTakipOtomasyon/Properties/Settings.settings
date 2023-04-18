@@ -2,6 +2,33 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="StokTakipOtomasyon.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
+    <Setting Name="Cs_1" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source =</Value>
+    </Setting>
+    <Setting Name="Cs_Sunucu" Type="System.String" Scope="User">
+      <Value Profile="(Default)">;</Value>
+    </Setting>
+    <Setting Name="Cs_2" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Initial Catalog =</Value>
+    </Setting>
+    <Setting Name="Cs_Database" Type="System.String" Scope="User">
+      <Value Profile="(Default)">;</Value>
+    </Setting>
+    <Setting Name="Cs_3" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">User Id =</Value>
+    </Setting>
+    <Setting Name="Cs_UserID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">;</Value>
+    </Setting>
+    <Setting Name="Cs_4" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Password =</Value>
+    </Setting>
+    <Setting Name="Cs_Password" Type="System.String" Scope="User">
+      <Value Profile="(Default)">;</Value>
+    </Setting>
+    <Setting Name="Database" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
     <Setting Name="Db_StokTakipConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
