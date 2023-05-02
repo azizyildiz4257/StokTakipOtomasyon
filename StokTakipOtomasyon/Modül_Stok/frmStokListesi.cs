@@ -69,5 +69,29 @@ namespace StokTakipOtomasyon.Modül_Stok
                 this.Close();
             }
         }
+
+        private void Btn_PDF_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sf = new SaveFileDialog())
+            {
+                sf.Filter = "Acrobat Reader|*.pdf";
+                if (sf.ShowDialog() == DialogResult.OK)
+                {
+                    Grd_Liste.ExportToPdf(sf.FileName);
+                }
+            }
+        }
+
+        private void Btn_XLS_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog sf = new SaveFileDialog())
+            {
+                sf.Filter = "Excel|*.xls";
+                if (sf.ShowDialog() == DialogResult.OK)
+                {
+                    Grd_Liste.ExportToXls(sf.FileName);
+                }
+            }
+        }
     }
 }

@@ -46,6 +46,8 @@
             this.StokKodu = new DevExpress.XtraGrid.Columns.GridColumn();
             this.StokAdı = new DevExpress.XtraGrid.Columns.GridColumn();
             this.StokBarkod = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Btn_PDF = new DevExpress.XtraEditors.SimpleButton();
+            this.Btn_XLS = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
             this.splitContainerControl1.Panel1.SuspendLayout();
@@ -94,6 +96,8 @@
             // 
             // xtraTabPage1
             // 
+            this.xtraTabPage1.Controls.Add(this.Btn_XLS);
+            this.xtraTabPage1.Controls.Add(this.Btn_PDF);
             this.xtraTabPage1.Controls.Add(this.Btn_Sil);
             this.xtraTabPage1.Controls.Add(this.Btn_Ara);
             this.xtraTabPage1.Controls.Add(this.Txt_Barkod);
@@ -243,6 +247,30 @@
             this.StokBarkod.Visible = true;
             this.StokBarkod.VisibleIndex = 2;
             // 
+            // Btn_PDF
+            // 
+            this.Btn_PDF.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Btn_PDF.Appearance.Options.UseFont = true;
+            this.Btn_PDF.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.Btn_PDF.Location = new System.Drawing.Point(11, 231);
+            this.Btn_PDF.Name = "Btn_PDF";
+            this.Btn_PDF.Size = new System.Drawing.Size(201, 43);
+            this.Btn_PDF.TabIndex = 8;
+            this.Btn_PDF.Text = "PDF Aktar";
+            this.Btn_PDF.Click += new System.EventHandler(this.Btn_PDF_Click);
+            // 
+            // Btn_XLS
+            // 
+            this.Btn_XLS.Appearance.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Btn_XLS.Appearance.Options.UseFont = true;
+            this.Btn_XLS.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.Btn_XLS.Location = new System.Drawing.Point(11, 280);
+            this.Btn_XLS.Name = "Btn_XLS";
+            this.Btn_XLS.Size = new System.Drawing.Size(201, 43);
+            this.Btn_XLS.TabIndex = 9;
+            this.Btn_XLS.Text = "XLS Aktar";
+            this.Btn_XLS.Click += new System.EventHandler(this.Btn_XLS_Click);
+            // 
             // frmStokListesi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -294,5 +322,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn StokKodu;
         private DevExpress.XtraGrid.Columns.GridColumn StokAdı;
         private DevExpress.XtraGrid.Columns.GridColumn StokBarkod;
+        private DevExpress.XtraEditors.SimpleButton Btn_XLS;
+        private DevExpress.XtraEditors.SimpleButton Btn_PDF;
     }
 }

@@ -86,7 +86,7 @@ namespace StokTakipOtomasyon.Modül_Stok
                 Stok.StokBirim = Cmb_Birim.Text;
                 Stok.StokGrupID = GrupID;
                 Stok.StokKodu = Txt_StokKodu.Text;
-                if(Resimsecim)Stok.StokResim = new System.Data.Linq.Binary(Resimleme.ResimYukleme(pictureBox1.Image)); // Resmi bu şekilde aldığımız zaman binary halinde veritabanına yüklemiş olacağız. Ders 1 2:06
+                if (Resimsecim) Stok.StokResim = new System.Data.Linq.Binary(Resimleme.ResimYukleme(pictureBox1.Image)); // Resmi bu şekilde aldığımız zaman binary halinde veritabanına yüklemiş olacağız. Ders 1 2:06
                 Stok.StokSatisFiyat = decimal.Parse(Txt_SatısFiyatı.Text);
                 Stok.StokSatisKDV = decimal.Parse(Txt_SatısKDV.Text);
                 Stok.StokSaveDate = DateTime.Now;
@@ -153,7 +153,8 @@ namespace StokTakipOtomasyon.Modül_Stok
             StokID = ID;
             Fonksiyonlar.Tbl_Stoklar Stok = Db.Tbl_Stoklars.First(s => s.Id == StokID);
             GrupAc(Stok.StokGrupID.Value);
-            pictureBox1.Image = Resimleme.ResimGetirme(Stok.StokResim.ToArray());
+            if (Stok.StokResim != null) pictureBox1.Image = Resimleme.ResimGetirme(Stok.StokResim.ToArray());
+            else pictureBox1.Image = null;  /*Bunun yerine boşken gösterilecek image dosyası atabiliriz Ders 19 35:57*/
             Txt_AlısFiyatı.Text = Stok.StokAlisFiyat.ToString();
             Txt_AlısKDV.Text = Stok.StokAlisKDV.ToString();
             Txt_Barkod.Text = Stok.StokBarkod;
